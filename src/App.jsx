@@ -6,7 +6,7 @@ import ComponentOneOne from './ComponentOneOne';
 import ComponentTwoTwo from './ComponentTwoTwo';
 
 function App() {
-  const [countOne, setCountOne] = useState(0);
+  const [countOne, setCountOne] = useState(10);
   return (
     <>
       <AppProvider>
