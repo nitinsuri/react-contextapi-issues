@@ -1,8 +1,8 @@
 import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-
 import App from './App';
 import AppOne from './App1';
+import Events from './Events';
 
 const root = createRoot(document.getElementById('app'));
 
@@ -12,5 +12,7 @@ root.render(
     <App />
     <h2>App 2</h2>
     <AppOne />
+    <h2>Events and Promises</h2>
+    <Events />
   </StrictMode>
 );
