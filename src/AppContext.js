@@ -1,11 +1,11 @@
 import React, { useState, createContext } from 'react';
 export const AppContext = createContext(null);
 
-const AppProvider = (props) => {
+const AppProvider = ({ children }) => {
   const [count, setCount] = useState(0);
   return (
     <AppContext.Provider value={[count, setCount]}>
-      {props.children}
+      {children}
     </AppContext.Provider>
   );
 };

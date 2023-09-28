@@ -1,9 +1,10 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 export default function Nav() {
   return (
     <nav>
-      <a href="/">App One</a>
-      <a href="/appone">App Two</a>
+      <NavLink to="/">App One</NavLink>
+      <NavLink to="/appone">App Two</NavLink>
     </nav>
   );
 }

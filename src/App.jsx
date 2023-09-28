@@ -7,7 +7,7 @@ import './style.css';
 function AppOne() {
   return (
     <>
-      <h1>Context Two</h1>
+      <h1>Untroubled Context</h1>
       <AppProvider>
         <ComponentOne />
         <ComponentTwo />

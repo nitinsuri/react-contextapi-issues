@@ -9,8 +9,12 @@ const root = createRoot(document.getElementById('app'));
 
 root.render(
   <StrictMode>
-    <Nav />
-    <App />
-    <AppOne />
+    <BrowserRouter>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/appone" element={<AppOne />} />
+      </Routes>
+    </BrowserRouter>
   </StrictMode>
 );
