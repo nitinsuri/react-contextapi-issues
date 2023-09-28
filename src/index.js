@@ -1,18 +1,16 @@
 import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './App';
-import AppOne from './App1';
-import Events from './Events';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Nav from './Nav';
+import App from './AppNRR';
+import AppOne from './App';
 
 const root = createRoot(document.getElementById('app'));
 
 root.render(
   <StrictMode>
-    <h2>App</h2>
+    <Nav />
     <App />
-    <h2>App 2</h2>
     <AppOne />
-    <h2>Events and Promises</h2>
-    <Events />
   </StrictMode>
 );

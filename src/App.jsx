@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import { AppContext } from './AppContext';
-import ComponentThree from './ComponentThree';
-import ComponentFour from './ComponentFour';
+import React from 'react';
+import AppProvider from './AppContext';
+import ComponentOne from './ComponentOne';
+import ComponentTwo from './ComponentTwo';
 import './style.css';
 
-function App() {
-  const [countOne, setCountOne] = useState(10);
+function AppOne() {
   return (
     <>
-      <AppContext.Provider value={[countOne, setCountOne]}>
-        <ComponentThree />
-        <ComponentFour />
-      </AppContext.Provider>
+      <h1>Context Two</h1>
+      <AppProvider>
+        <ComponentOne />
+        <ComponentTwo />
+      </AppProvider>
     </>
   );
 }
 
-export default App;
+export default AppOne;

@@ -5,18 +5,38 @@
 body {
   margin: 0;
   padding: 1rem;
-  font-family: system-ui, sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif;
   color: black;
   background-color: white;
 }
 
 h1 {
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 2rem;
+}
+h2 {
+  font-weight: 800;
+  font-size: 1.75rem;
 }
 
 section {
-  border: 1px solid lightgray;
-  margin-bottom: 1rem;
+  background-color: white;
+  border: 4px solid #666;
+  border-radius: 12px;
+  box-shadow: 0 0 10px 2px #666, 10px 10px 0px #782121, -10px -10px 0px #066d46;
+  margin-bottom: 2rem;
   padding: 1rem;
+}
+
+button {
+  background-color: #4f46e5;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  color: white;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-right: 10px;
+  padding: 8px 12px;
 }
