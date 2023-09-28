@@ -1,11 +1,11 @@
 * {
   box-sizing: border-box;
+  font-family: 'Albert Sans', system-ui, sans-serif;
 }
 
 body {
   margin: 0;
   padding: 1rem;
-  font-family: ui-sans-serif, system-ui, sans-serif;
   color: black;
   background-color: white;
 }
