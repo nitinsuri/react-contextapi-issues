@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 export default function Nav() {
   return (
     <nav>
-      <NavLink to="/">App One</NavLink>
-      <NavLink to="/appone">App Two</NavLink>
+      <NavLink to="/">App TR</NavLink>
+      <NavLink to="/appnt">App NT</NavLink>
     </nav>
   );
 }

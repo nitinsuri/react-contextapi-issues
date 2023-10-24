@@ -1,19 +1,20 @@
-import React from 'react';
-import AppProvider from './AppContext';
-import ComponentOne from './ComponentOne';
-import ComponentTwo from './ComponentTwo';
+import React, { useState } from 'react';
+import { AppContext } from './AppContext';
+import ComponentThree from './ComponentThree';
+import ComponentFour from './ComponentFour';
 import './style.css';
 
-function AppOne() {
+function App() {
+  const [countOne, setCountOne] = useState(10);
   return (
     <>
-      <h1>Untroubled Context</h1>
-      <AppProvider>
-        <ComponentOne />
-        <ComponentTwo />
-      </AppProvider>
+      <h1>Troubled Context</h1>
+      <AppContext.Provider value={[countOne, setCountOne]}>
+        <ComponentThree />
+        <ComponentFour />
+      </AppContext.Provider>
     </>
   );
 }
 
-export default AppOne;
+export default App;

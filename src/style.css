@@ -21,17 +21,17 @@ h2 {
 
 section {
   background-color: white;
-  border: 4px solid #666;
+  border: 2px solid #ccc;
   border-radius: 12px;
-  box-shadow: 0 0 10px 2px #666, 10px 10px 0px #782121, -10px -10px 0px #066d46;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   margin-bottom: 2rem;
   padding: 1rem;
 }
 
 a,
 button {
-  background-color: #4f46e5;
-  border: 1px solid #e5e7eb;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   border-radius: 6px;
   color: white;
   cursor: pointer;
