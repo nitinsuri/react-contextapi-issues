@@ -13,7 +13,7 @@ root.render(
       <Nav />
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/appone" element={<AppNT />} />
+        <Route path="/appnt" element={<AppNT />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

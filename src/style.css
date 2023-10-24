@@ -30,32 +30,24 @@ section {
 
 a,
 button {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  background-color: transparent;
+  border: 1px solid #999;
   border-radius: 6px;
-  color: white;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 2px 2px;
+  color: #333;
   cursor: pointer;
-  font-family: ui-sans-serif, system-ui, sans-serif;
   font-weight: 600;
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 0.75em;
+  line-height: 1;
   margin-right: 10px;
-  padding: 8px 12px;
+  padding: 0.5em 0.75em;
   text-decoration: none;
   transition: all 0.25s;
 }
-button:hover {
-  background-color: #645ed6;
-}
-a {
-  background-color: transparent;
-  border: 1px solid #5f5f5f;
-  border-width: 0 0 1px 0;
-  color: #333;
-}
 
+button:hover,
 a:hover {
-  background-color: #ccc;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 nav {
   display: flex;
