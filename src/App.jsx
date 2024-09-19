@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { AppContext } from './AppContext';
 import ComponentThree from './ComponentThree';
 import ComponentFour from './ComponentFour';
+import OptiName from './OptiName';
 import './style.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <ComponentThree />
         <ComponentFour />
       </AppContext.Provider>
+      <OptiName />
     </>
   );
 }
