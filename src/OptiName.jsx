@@ -7,10 +7,7 @@ export default function OptiName() {
   React.useEffect(() => {
     setFullName(`${firstName} ${lastName}`);
   }, [firstName, lastName]);
-  const [state, setState] = React.useState({
-    name: 'John',
-    age: 30,
-  });
+
   return (
     <>
       <input
