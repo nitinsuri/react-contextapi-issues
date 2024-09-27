@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { AppContext } from './AppContext';
-import ComponentThree from './ComponentThree';
-import ComponentFour from './ComponentFour';
-import OptiName from './OptiName';
+import ComponentOne from './ComponentOne';
+import ComponentTwo from './ComponentTwo';
 import './style.css';
 
 function App() {
@@ -11,10 +10,9 @@ function App() {
     <>
       <h1>Context Rerendering</h1>
       <AppContext.Provider value={[countOne, setCountOne]}>
-        <ComponentThree />
-        <ComponentFour />
+        <ComponentOne />
+        <ComponentTwo />
       </AppContext.Provider>
-      <OptiName />
     </>
   );
 }

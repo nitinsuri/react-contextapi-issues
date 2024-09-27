@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import { AppContext } from './AppContext';
+import React from 'react';
 
 export default function ComponentTwo() {
   console.log('Component TWO');
@@ -7,8 +6,8 @@ export default function ComponentTwo() {
     <>
       <section>
         <p>
-          This message is from Component TWO and has nothing to do with
-          Component ONE.
+          This message is from Component <strong>TWO</strong> and has nothing to
+          do with Component THREE.
         </p>
       </section>
     </>
