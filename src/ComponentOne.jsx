@@ -11,8 +11,7 @@ export default function ComponentOne() {
   return (
     <>
       <section>
-        <h1>Hello from Component ONE</h1>
-        <h2>Count: {countOne}</h2>
+        <h1>Count: {countOne}</h1>
         <button onClick={() => setCountOne((countOne) => countOne + 1)}>
           Increment
         </button>

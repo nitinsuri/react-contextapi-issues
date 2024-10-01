@@ -7,7 +7,7 @@ export default function ComponentTwo() {
       <section>
         <p>
           This message is from Component <strong>TWO</strong> and has nothing to
-          do with Component THREE.
+          do with the Component ONE.
         </p>
       </section>
     </>
