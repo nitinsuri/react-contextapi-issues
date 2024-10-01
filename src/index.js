@@ -9,3 +9,13 @@ root.render(
     <App />
   </StrictMode>
 );
+
+async function getData() {
+  const fetcher = await fetch(
+    'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=b'
+  );
+  const captureResponse = await fetcher.json();
+  console.log(captureResponse.drinks);
+  return captureResponse;
+}
+getData();

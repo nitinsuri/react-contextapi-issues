@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { AppContext } from './AppContext';
 import ComponentOne from './ComponentOne';
 import ComponentTwo from './ComponentTwo';
+import DrinksList from './DrinksList';
 import './style.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <ComponentOne />
         <ComponentTwo />
       </AppContext.Provider>
+      <DrinksList />
     </>
   );
 }
