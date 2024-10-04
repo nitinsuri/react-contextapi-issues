@@ -16,6 +16,6 @@ async function getData() {
   );
   const captureResponse = await fetcher.json();
   console.log(captureResponse.drinks);
-  return captureResponse;
 }
-getData();
+
+// getData();
