@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function SelectorDropDown({ cb, options }) {
+export default function SelectorDropDown({ cb, options, selectorId }) {
   return (
-    <select onChange={(e) => cb(e)}>
+    <select onChange={(e) => cb(e, selectorId)} id={selectorId}>
       <option value={null} defaultValue disabled>
         Select
       </option>

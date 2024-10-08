@@ -1,35 +1,38 @@
 import React from 'react';
 import SelectorDropDown from './SelectorDropDown';
+import { drinksFilerPptions } from './constants.js';
 
 export default function DrinksList() {
-  const options = [
-    {
-      val: 'a',
-      name: 'A',
-    },
-    {
-      val: 'b',
-      name: 'B',
-    },
-  ];
   const [data, setData] = React.useState([]);
-  async function getData() {
+  const [filter, setFilter] = React.useState('a');
+  async function getData(filter) {
     const fetcher = await fetch(
-      'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=c'
+      `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${filter}`
     );
     const captureResponse = await fetcher.json();
+    if (captureResponse.drinks === null) return false;
     setData(captureResponse.drinks);
   }
 
   React.useEffect(() => {
-    getData();
-  }, []);
+    getData(filter);
+    () => {
+      getData(filter);
+    };
+  }, [filter]);
 
-  const changeCB = (e) => alert(e.target.value);
+  const changeCB = (e) => {
+    setFilter(e.target.value);
+  };
+  
 
   return (
     <>
-      <SelectorDropDown cb={changeCB} options={options} />
+      <SelectorDropDown
+        cb={changeCB}
+        options={drinksFilerPptions}
+        selectorId={'drinksFilter'}
+      />
       <ul>
         {data &&
           data.map((i) => (
