@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from './Nav';
 import App from './App';
 import AppNT from './AppNT';
+import OptiName from './OptiName';
+import Cart from './Cart';
 
 const root = createRoot(document.getElementById('app'));
 
@@ -14,6 +16,8 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/appnt" element={<AppNT />} />
+        <Route path="/printname" element={<OptiName />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

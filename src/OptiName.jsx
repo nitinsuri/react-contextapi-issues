@@ -9,6 +9,7 @@ export default function OptiName() {
 
   return (
     <>
+      <h1>Print name</h1>
       <input
         type="text"
         id="firstName"
