@@ -20,8 +20,7 @@ export default function OptiName() {
         id="lastName"
         onChange={(e) => setLastName(e.target.value)}
       />
-      <br />
-      {fullName}
+      <h4>{fullName}</h4>
     </>
   );
 }

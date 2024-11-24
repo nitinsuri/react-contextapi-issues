@@ -2,7 +2,7 @@ import React from 'react';
 import AppProvider from './AppContext';
 import ComponentOne from './ComponentOne';
 import ComponentTwo from './ComponentTwo';
-import './style.css';
+import './styles.scss';
 
 function AppNT() {
   return (

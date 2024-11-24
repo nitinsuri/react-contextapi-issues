@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { AppContext } from './AppContext';
 import ComponentThree from './ComponentThree';
 import ComponentFour from './ComponentFour';
-import './style.css';
+import './styles.scss';
 
 function App() {
   const [countOne, setCountOne] = useState(0);
