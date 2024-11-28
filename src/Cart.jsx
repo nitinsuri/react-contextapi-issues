@@ -85,8 +85,8 @@ export default function Cart() {
           <TextRA>Price (ea)</TextRA>
           <TextRA>Qty</TextRA>
         </CartListHeader>
-        {shoppingCart.map((item) => (
-          <CartListItem>
+        {shoppingCart.map((item, idx) => (
+          <CartListItem key={idx}>
             <span>{item.name}</span>
             <TextRA>${item.price}</TextRA>
             <TextRA>{item.quantity}</TextRA>

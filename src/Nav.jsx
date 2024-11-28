@@ -7,6 +7,7 @@ export default function Nav() {
       <NavLink to="/appnt">App NT</NavLink>
       <NavLink to="/printname">Print name</NavLink>
       <NavLink to="/cart">Cart List</NavLink>
+      <NavLink to="/search">Search</NavLink>
     </nav>
   );
 }
