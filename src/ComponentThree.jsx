@@ -11,8 +11,8 @@ export default function ComponentThree() {
   return (
     <>
       <section>
-        <h1>Hello from Component THREE</h1>
-        <h2>Count: {countOne}</h2>
+        <h2>Hello from Component THREE</h2>
+        <h3>Count: {countOne}</h3>
         <button onClick={() => setCountOne((countOne) => countOne + 1)}>
           Increment
         </button>

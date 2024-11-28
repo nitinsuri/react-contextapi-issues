@@ -7,7 +7,7 @@ import './styles.scss';
 function AppNT() {
   return (
     <>
-      <h1>Reactivated</h1>
+      <h1>Fixed</h1>
       <AppProvider>
         <ComponentOne />
         <ComponentTwo />

@@ -12,6 +12,7 @@ const root = createRoot(document.getElementById('app'));
 
 root.render(
   <StrictMode>
+    <h1>Reactivated</h1>
     <BrowserRouter>
       <Nav />
       <Routes>

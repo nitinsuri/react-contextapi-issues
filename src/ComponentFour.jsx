@@ -5,8 +5,9 @@ export default function ComponentFour() {
   return (
     <>
       <section>
+        <h2>Component FOUR</h2>
         <p>
-          This message is from Component FOUR and has nothing to do with
+          This is Component FOUR, a DUMB component, and has nothing to do with
           Component THREE.
         </p>
       </section>
