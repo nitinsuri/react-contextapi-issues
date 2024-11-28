@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import useDebounce from './hooks/useDebounce';
 export default function PrintName() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [fullName, setFullName] = useState('');
+  const debouncedTerm = useDebounce(firstName, 500);
   useEffect(() => {
     setFullName(`${firstName} ${lastName}`);
   }, [firstName, lastName]);
