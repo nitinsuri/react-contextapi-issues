@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import useDebounce from './hooks/useDebounce';
+import List from './List';
 
 export default function Search() {
   const [searchTerm, setSearchTerm] = useState('');
   const [notFound, setNotFound] = useState(false);
+  const [results, setResults] = useState([]);
   const debouncedTerm = useDebounce(searchTerm, 500);
   function fetchData() {
     const url = `https://wordsapiv1.p.rapidapi.com/words/${searchTerm}`;
@@ -17,9 +19,12 @@ export default function Search() {
     fetch(url, options)
       .then((res) => res.json())
       .then((res) => {
-        console.log(res.message);
-        if (!res.success && res.message === 'word not found') {
+        console.log(res);
+        if (res.status === 400) {
           setNotFound(true);
+        } else {
+          debugger;
+          setResults(res.results);
         }
       });
   }
@@ -29,19 +34,21 @@ export default function Search() {
   }, [debouncedTerm]);
   return (
     <>
-      <h1>Search with DeBounce</h1>
+      <h1>Search</h1>
       <input
         autoComplete="off"
         type="text"
         id="searchTerm"
         onChange={(e) => setSearchTerm(e.target.value)}
       />
+      {notFound ? 'No results to display' : null}
+      <p>
+        {debouncedTerm.length > 0 && !notFound
+          ? `You search for: ${debouncedTerm}`
+          : null}
+      </p>
 
-      {notFound ?? <p>nothing found</p>}
-
-      {debouncedTerm.length > 0 ?? (
-        <p>You searched for the word: {debouncedTerm}</p>
-      )}
+      {<List data={results} />}
     </>
   );
 }
