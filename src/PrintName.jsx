@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-export default function OptiName() {
+export default function PrintName() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [fullName, setFullName] = useState('');

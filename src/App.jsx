@@ -8,7 +8,7 @@ function App() {
   const [countOne, setCountOne] = useState(0);
   return (
     <>
-      <h1>Context Rerendering</h1>
+      <h1>Reactivated</h1>
       <AppContext.Provider value={[countOne, setCountOne]}>
         <ComponentThree />
         <ComponentFour />

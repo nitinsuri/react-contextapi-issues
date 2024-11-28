@@ -7,7 +7,7 @@ import './styles.scss';
 function AppNT() {
   return (
     <>
-      <h1>Context Non-rerendering</h1>
+      <h1>Reactivated</h1>
       <AppProvider>
         <ComponentOne />
         <ComponentTwo />
