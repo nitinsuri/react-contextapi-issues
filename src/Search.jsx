@@ -32,7 +32,7 @@ export default function Search() {
   }, [debouncedTerm]);
   return (
     <>
-      <h1>Search</h1>
+      <h1>Dictionary Search</h1>
       <section>
         <input
           autoComplete="off"
