@@ -30,6 +30,16 @@ export default function Search() {
     if (debouncedTerm.length < 1) return;
     fetchData();
   }, [debouncedTerm]);
+
+  const onChangeHandlerSearchInput = (e) => {
+    const val = e.target.value;
+    if (val.length < 1) {
+      setSearchTerm('');
+      setNotFound(false);
+      setResults();
+    }
+    setSearchTerm(val);
+  };
   return (
     <>
       <h1>Dictionary Search</h1>
@@ -38,7 +48,7 @@ export default function Search() {
           autoComplete="off"
           type="text"
           id="searchTerm"
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={(e) => onChangeHandlerSearchInput(e)}
         />
         <p>{notFound ? `No results to found for: ${debouncedTerm}` : null}</p>
         <p>
