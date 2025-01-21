@@ -50,7 +50,7 @@ export default function Search() {
           id="searchTerm"
           onChange={(e) => onChangeHandlerSearchInput(e)}
         />
-        <p>{notFound ? `No results to found for: ${debouncedTerm}` : null}</p>
+        <p>{notFound ? `No results found for: ${debouncedTerm}` : null}</p>
         <p>
           {debouncedTerm.length > 0 && !notFound
             ? `You searched for: ${debouncedTerm}`
