@@ -6,6 +6,7 @@ import App from './App';
 import AppNT from './AppNT';
 import PrintName from './PrintName';
 import Search from './Search';
+import Subscriptions from './Subscriptions';
 import Cart from './Cart';
 
 const root = createRoot(document.getElementById('app'));
@@ -21,6 +22,7 @@ root.render(
         <Route path="/printname" element={<PrintName />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/search" element={<Search />} />
+        <Route path="/subscriptions" element={<Subscriptions />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

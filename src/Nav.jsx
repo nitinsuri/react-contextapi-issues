@@ -8,6 +8,7 @@ export default function Nav() {
       <NavLink to="/printname">Print name</NavLink>
       <NavLink to="/cart">Cart List</NavLink>
       <NavLink to="/search">Search</NavLink>
+      <NavLink to="/subscriptions">Subscriptions</NavLink>
     </nav>
   );
 }
