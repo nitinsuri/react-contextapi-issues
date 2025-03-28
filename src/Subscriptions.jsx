@@ -193,7 +193,7 @@ export default function Subscriptions() {
     <ul>
       {data.map((item) => {
         return (
-          <li>
+          <li key={Math.random()}>
             <div>{item.name}</div>
             <div>{item.category}</div>
             <div>{item.description}</div>
