@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import useDebounce from './hooks/useDebounce';
-import List from './List';
+import useDebounce from '../../hooks/useDebounce';
+import List from './SearchList';
 
 export default function Search() {
   const [searchTerm, setSearchTerm] = useState('');

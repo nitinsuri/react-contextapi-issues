@@ -1,5 +1,5 @@
 import React from 'react';
-import listStyles from './ListStyles';
+import listStyles from './SearchListStyles';
 
 export default function List({ data }) {
   const { ListWrapper, ListItem } = listStyles;

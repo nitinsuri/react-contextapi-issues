@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextRA, TextStrongRA } from './StyleUtils';
+import { TextRA, TextStrongRA } from '../../StyleUtils';
 import cartStyles from './CartStyles';
 
 export default function Cart() {
