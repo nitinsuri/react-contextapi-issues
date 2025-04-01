@@ -1,6 +1,7 @@
 import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ErrorBoundary from './hoc/ErrorBoundry';
 import Nav from './Nav';
 import App from './App';
 import AppNT from './AppNT';
@@ -13,6 +14,7 @@ const root = createRoot(document.getElementById('app'));
 
 root.render(
   <StrictMode>
+    <ErrorBoundary>
     <h1>Reactivated</h1>
     <BrowserRouter>
       <Nav />
@@ -25,5 +27,6 @@ root.render(
         <Route path="/subscriptions" element={<Subscriptions />} />
       </Routes>
     </BrowserRouter>
+    </ErrorBoundary>
   </StrictMode>
 );
