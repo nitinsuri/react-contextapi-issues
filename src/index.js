@@ -5,10 +5,10 @@ import ErrorBoundary from './hoc/ErrorBoundry';
 import Nav from './Nav';
 import App from './App';
 import AppNT from './AppNT';
-import PrintName from './PrintName';
-import Search from './Search';
-import Subscriptions from './Subscriptions';
-import Cart from './Cart';
+import PrintName from './Components/PrintName/PrintName';
+import Search from './Components/Search/Search';
+import Subscriptions from './Components/Subscription/Subscriptions';
+import Cart from './Components/Cart/Cart';
 
 const root = createRoot(document.getElementById('app'));
 

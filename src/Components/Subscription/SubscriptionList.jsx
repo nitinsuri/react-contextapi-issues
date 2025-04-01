@@ -1,5 +1,5 @@
 import React from "react";
-import SubscriptionItem from "./SubscriptionItem";
+import SubscriptionItem from '../../Components/Subscription/SubscriptionItem'
 
 export default function SubscriptionList(props) {
     const { items, title } = props;
