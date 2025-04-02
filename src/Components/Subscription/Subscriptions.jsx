@@ -179,7 +179,7 @@ export default function Subscriptions() {
   const uniqueCategories = Array.from(new Set([...categories].sort()));
   const featuredItems = data.filter(item => item.featured)
 
-  const  = (e) => console.log(e.target.childNodes[0]);
+  const filterButtonOnClickHandler = (e) => console.log(e.target.childNodes[0]);
 
   return (
     <>
