@@ -176,7 +176,7 @@ export default function Subscriptions() {
   const categories = data.map(item => {
     return item.category
   })
-  const uniqueCategories = Array.from(new Set([...categories]));
+  const uniqueCategories = Array.from(new Set([...categories].sort()));
   const featuredItems = data.filter(item => item.featured)
 
   return (
