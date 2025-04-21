@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { AppContext } from './AppContext';
+import { AppContext } from './AppContexts/AppContext';
 
 export default function ComponentThree() {
   console.log('Component THREE');

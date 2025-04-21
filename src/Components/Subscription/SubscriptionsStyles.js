@@ -1,10 +1,33 @@
 import styled from 'styled-components';
 
-const categoryItems = styled.ul`
+const CategoryWrapper = styled.div`
+  border: 1px solid ${props => props.highlightColor};;
+  border-top: 10px solid ${props => props.highlightColor};
+  padding: 1rem;
+  margin-bottom: 2rem;
+  h2 {
+    margin-top: 0.5rem;
+    position: relative;
+    &::before {
+      background-color: ${props => props.highlightColor};
+      border-radius: 100%;
+      content: " ";
+      display: inline-block;
+      height: 30px;
+      position: absolute;
+      width: 30px;
+      z-index: -1;
+    }
+  }
+  
+`;
+
+const CategoryItems = styled.ul`
+  list-style-type: none;
   margin: 0;
   padding:0;
 `;
 
-const SubscriptionsStyles = {categoryItems}
+const SubscriptionsStyles = {CategoryWrapper, CategoryItems}
 
 export default SubscriptionsStyles

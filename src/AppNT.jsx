@@ -1,5 +1,5 @@
 import React from 'react';
-import AppProvider from './AppContext';
+import AppProvider from './AppContexts/AppContext';
 import ComponentOne from './ComponentOne';
 import ComponentTwo from './ComponentTwo';
 import './styles.scss';
