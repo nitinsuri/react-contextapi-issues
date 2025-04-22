@@ -5,7 +5,7 @@ import content from './../../content.json';
 
 
 export default function Subscriptions() {
-  const colorPallete= ["#ea5545", "#f46a9b", "#ef9b20", "#edbf33", "#ede15b", "#bdcf32", "#87bc45", "#27aeef", "#b33dc6","#ea5545", "#f46a9b", "#ef9b20", "#edbf33", "#ede15b", "#bdcf32", "#87bc45", "#27aeef", "#b33dc6"];
+  const colorPallete= ["#000000","#ea5545", "#f46a9b", "#ef9b20", "#edbf33", "#ede15b", "#bdcf32", "#87bc45", "#27aeef", "#b33dc6","#ea5545", "#f46a9b", "#ef9b20", "#edbf33", "#ede15b", "#bdcf32", "#87bc45", "#27aeef", "#b33dc6"];
   const {componentTitle, featuredChannels} = content.subscriptions;
   const data = [
     {
@@ -104,9 +104,9 @@ export default function Subscriptions() {
     <h1>{componentTitle}</h1>
     
       {
-        featuredItems.length > 0 ? <SubscriptionList items={featuredItems} title={featuredChannels} /> : null }
+        featuredItems.length > 0 ? <SubscriptionList items={featuredItems} title={featuredChannels} highlightColor={colorPallete[0]} /> : null }
       {
-        categorisedData.map((categoryData, idx) => <SubscriptionList items={categoryData} title={categoryData[0].category} highlightColor={colorPallete[idx]} />)
+        categorisedData.map((categoryData, idx) => <SubscriptionList items={categoryData} title={categoryData[0].category} highlightColor={colorPallete[idx+1]} />)
       }
       <SubscriptionsNav uniqueCategories={uniqueCategories} />
     </>

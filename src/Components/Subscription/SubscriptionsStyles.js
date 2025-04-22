@@ -8,14 +8,20 @@ const CategoryWrapper = styled.div`
   h2 {
     margin-top: 0.5rem;
     position: relative;
+    &::first-letter {
+      display: inline-block;
+      margin-right: 1rem;
+    }
     &::before {
       background-color: ${props => props.highlightColor};
       border-radius: 100%;
       content: " ";
       display: inline-block;
-      height: 30px;
+      height: 40px;
+      left: -12px;
       position: absolute;
-      width: 30px;
+      top: -5px;
+      width: 40px;
       z-index: -1;
     }
   }
@@ -23,11 +29,19 @@ const CategoryWrapper = styled.div`
 `;
 
 const CategoryItems = styled.ul`
+  display: flex;
+  gap: 1rem;
   list-style-type: none;
   margin: 0;
   padding:0;
 `;
 
-const SubscriptionsStyles = {CategoryWrapper, CategoryItems}
+const CategoryItem = styled.li`
+  h3 {
+    margin-top: 0;
+  }
+`;
+
+const SubscriptionsStyles = {CategoryWrapper, CategoryItems, CategoryItem}
 
 export default SubscriptionsStyles
