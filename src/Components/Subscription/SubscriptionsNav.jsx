@@ -1,12 +1,11 @@
 import React from 'react';
 
 export default function SubscriptionsNav(props){
-    const {uniqueCategories} = props;
-    const filterButtonOnClickHandler = (e) => console.log(e.target.childNodes[0]);
+    const {uniqueCategories, filterButtonOnClickHandler} = props;
     return (
         <nav>
           {
-            uniqueCategories.map(item => <button key={Math.random()} onClick={e => filterButtonOnClickHandler(e)}>{item}</button>)
+            uniqueCategories.map(item => <button key={Math.random()} onClick={e => filterButtonOnClickHandler(item)}>{item}</button>)
           }
         </nav>
     )

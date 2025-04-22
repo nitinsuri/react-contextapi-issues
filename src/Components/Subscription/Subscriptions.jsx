@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import SubscriptionList from './SubscriptionList';
 import SubscriptionsNav from './SubscriptionsNav';
 import content from './../../content.json';
@@ -6,6 +6,7 @@ import content from './../../content.json';
 
 export default function Subscriptions() {
   const colorPallete= ["#000000","#ea5545", "#f46a9b", "#ef9b20", "#edbf33", "#ede15b", "#bdcf32", "#87bc45", "#27aeef", "#b33dc6","#ea5545", "#f46a9b", "#ef9b20", "#edbf33", "#ede15b", "#bdcf32", "#87bc45", "#27aeef", "#b33dc6"];
+
   const {componentTitle, featuredChannels} = content.subscriptions;
   const data = [
     {
@@ -94,21 +95,30 @@ export default function Subscriptions() {
     },
   ];
 
+  const [processedData, setProcessedData]=useState([])
+
+  const filterButtonOnClickHandler = (selectedCategory) => {
+    console.info('selectedCategory', selectedCategory);
+    setProcessedData([...(data.filter(item => item.category === selectedCategory))])
+  }
   const categories = data.map(item => item.category);
   const uniqueCategories = Array.from(new Set([...categories].sort()));
   const featuredItems = data.filter(item => item.featured);
   const categorisedData = uniqueCategories.map(category => data.filter(item => item.category === category && !item.featured));
 
+  useEffect(()=>{
+    console.info(processedData)
+  },[processedData])
+
   return (
     <>
     <h1>{componentTitle}</h1>
-    
       {
         featuredItems.length > 0 ? <SubscriptionList items={featuredItems} title={featuredChannels} highlightColor={colorPallete[0]} /> : null }
       {
         categorisedData.map((categoryData, idx) => <SubscriptionList items={categoryData} title={categoryData[0].category} highlightColor={colorPallete[idx+1]} />)
       }
-      <SubscriptionsNav uniqueCategories={uniqueCategories} />
+      <SubscriptionsNav uniqueCategories={uniqueCategories} filterButtonOnClickHandler={filterButtonOnClickHandler} />
     </>
   );
 }
