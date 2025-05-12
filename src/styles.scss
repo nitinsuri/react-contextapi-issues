@@ -52,9 +52,12 @@ a:hover {
 }
 nav {
   display: flex;
-  gap: 20px;
+  gap: 1rem;
   justify-content: center;
   margin-block: 1rem;
+  a, button {
+    margin: 0;
+  }
 }
 
 .emphasis {

@@ -5,8 +5,8 @@ import content from './../../content.json';
 
 
 export default function Subscriptions() {
-  const colorPallete= ["#000000","#ea5545", "#f46a9b", "#ef9b20", "#edbf33", "#ede15b", "#bdcf32", "#87bc45", "#27aeef", "#b33dc6","#ea5545", "#f46a9b", "#ef9b20", "#edbf33", "#ede15b", "#bdcf32", "#87bc45", "#27aeef", "#b33dc6"];
-
+  const [processedData, setProcessedData]=useState([]);
+  const [filteredData, setFilteredData]=useState([]);
   const {componentTitle, featuredChannels} = content.subscriptions;
   const data = [
     {
@@ -94,29 +94,32 @@ export default function Subscriptions() {
       name: 'CTV Sci-Fi 1 ',
     },
   ];
+  const colorGenerator = () => {
+    const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+    let hexColor = "#";
+    for (let i = 0; i < 6; i++) {
+      hexColor += hex[Math.floor(Math.random() *  hex.length)];
+    }
+    return hexColor
+  };
 
-  const [processedData, setProcessedData]=useState([])
-
-  const filterButtonOnClickHandler = (selectedCategory) => {
-    console.info('selectedCategory', selectedCategory);
-    setProcessedData([...(data.filter(item => item.category === selectedCategory))])
-  }
+  const filterButtonOnClickHandler = (selectedCategory) => setFilteredData([...(data.filter(item => item.category === selectedCategory))]);
   const categories = data.map(item => item.category);
   const uniqueCategories = Array.from(new Set([...categories].sort()));
   const featuredItems = data.filter(item => item.featured);
   const categorisedData = uniqueCategories.map(category => data.filter(item => item.category === category && !item.featured));
 
   useEffect(()=>{
-    console.info(processedData)
-  },[processedData])
+    console.info(filteredData)
+  },[filteredData])
 
   return (
     <>
     <h1>{componentTitle}</h1>
       {
-        featuredItems.length > 0 ? <SubscriptionList items={featuredItems} title={featuredChannels} highlightColor={colorPallete[0]} /> : null }
+        featuredItems.length > 0 ? <SubscriptionList items={featuredItems} title={featuredChannels} highlightColor={colorGenerator()} /> : null }
       {
-        categorisedData.map((categoryData, idx) => <SubscriptionList items={categoryData} title={categoryData[0].category} highlightColor={colorPallete[idx+1]} />)
+        categorisedData.map((categoryData, idx) => <SubscriptionList items={categoryData} title={categoryData[0].category} highlightColor={colorGenerator()} />)
       }
       <SubscriptionsNav uniqueCategories={uniqueCategories} filterButtonOnClickHandler={filterButtonOnClickHandler} />
     </>

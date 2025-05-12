@@ -4,10 +4,11 @@ import SubscriptionsStyles from './SubscriptionsStyles';
 
 export default function SubscriptionList(props) {
     const { items, title, highlightColor } = props;
-    const {CategoryWrapper, CategoryItems} = SubscriptionsStyles;
+    const {CategoryWrapper, SectionTitle, CategoryItems} = SubscriptionsStyles;
+
     return (
         <CategoryWrapper highlightColor={highlightColor ? highlightColor : null}>
-            <h2>{title}</h2>
+            <SectionTitle highlightColor={highlightColor ? highlightColor : null}>{title}</SectionTitle>
             <CategoryItems>
                 {items.map((item) => <SubscriptionItem item={item} /> )}
             </CategoryItems>
